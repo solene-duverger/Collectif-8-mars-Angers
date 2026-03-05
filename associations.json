@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Planning Familial 49",
+    "description": "Accompagnement en santé sexuelle, contraception, IVG et lutte contre les violences.",
+    "icon": "❤️‍🩹",
+    "color": "#E63946",
+    "url": ""
+  },
+  {
+    "name": "Collages Féministes",
+    "description": "Actions de rue et collages pour dénoncer les violences sexistes et sexuelles.",
+    "icon": "✊",
+    "color": "#F4A261",
+    "url": ""
+  },
+  {
+    "name": "Les Angegouines",
+    "description": "Collectif lesbien féministe angevin pour la visibilité et les droits des lesbiennes.",
+    "icon": "🏳️‍🌈",
+    "color": "#E76F51",
+    "url": ""
+  },
+  {
+    "name": "AIDES",
+    "description": "Lutte contre le VIH/sida et les hépatites, pour les droits des personnes séropositives.",
+    "icon": "🎗️",
+    "color": "#E63946",
+    "url": ""
+  },
+  {
+    "name": "ATTAC 49",
+    "description": "Association pour la taxation des transactions financières et l'action citoyenne.",
+    "icon": "🌍",
+    "color": "#2A9D8F",
+    "url": ""
+  },
+  {
+    "name": "Corps à Cœur",
+    "description": "Association de soutien et d'accompagnement des femmes victimes de violences.",
+    "icon": "💜",
+    "color": "#264653",
+    "url": ""
+  },
+  {
+    "name": "Solidaires",
+    "description": "Union syndicale engagée pour les droits des travailleur·euses et l'égalité.",
+    "icon": "⚡",
+    "color": "#E63946",
+    "url": ""
+  },
+  {
+    "name": "FSU",
+    "description": "Fédération syndicale unitaire, engagée pour l'égalité femmes-hommes dans l'éducation et les services publics.",
+    "icon": "📚",
+    "color": "#457B9D",
+    "url": ""
+  },
+  {
+    "name": "NousToutes 49",
+    "description": "Collectif féministe contre les violences sexistes et sexuelles. Marches, formations, actions.",
+    "icon": "🟣",
+    "color": "#9B2226",
+    "url": ""
+  }
+]
