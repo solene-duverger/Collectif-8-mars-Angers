@@ -1,0 +1,11 @@
+<nav class="nav">
+  <a href="/" class="nav-logo"><span class="red">8</span> MARS 49</a>
+  <ul class="nav-links">
+    <li><a href="/#accueil">Accueil</a></li>
+    <li><a href="/#collectif">Le collectif</a></li>
+    <li><a href="/#associations">Associations</a></li>
+    <li><a href="/#agenda">Agenda</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+</nav>
