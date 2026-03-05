@@ -1,12 +1,11 @@
 baseURL = "https://collectif-8-mars-angers.netlify.app/"
 languageCode = "fr"
 title = "Collectif 8 mars 49"
-theme = ""
 
 [params]
   description = "Collectif féministe · Angers · Maine-et-Loire"
   tagline = "Nos droits ne sont jamais acquis."
-  manifesto = "Nous luttons contre toutes les formes de violences sexistes et sexuelles, pour l'égalité salariale, pour le droit à disposer de son corps, and pour une société féministe, inclusive et solidaire."
+  manifesto = "Nous luttons contre toutes les formes de violences sexistes et sexuelles, pour l'égalité salariale, pour le droit à disposer de son corps, et pour une société féministe, inclusive et solidaire."
   contactEmail = "collectif8mars49@example.org"
 
 [markup]
