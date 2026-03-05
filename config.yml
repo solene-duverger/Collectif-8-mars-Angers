@@ -1,0 +1,78 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Pour le mode test local (sans authentification) décommentez ces lignes :
+# local_backend: true
+
+media_folder: static/images
+public_folder: /images
+
+locale: fr
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  # ========== ÉVÉNEMENTS ==========
+  - name: "evenements"
+    label: "Événements"
+    label_singular: "Événement"
+    folder: "content/evenements"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - label: "Type d'événement"
+        name: "type_evenement"
+        widget: "select"
+        options:
+          - { label: "Mobilisation / Manif", value: "mobilisation" }
+          - { label: "Culture / Spectacle", value: "culture" }
+          - { label: "Formation / Atelier", value: "formation" }
+          - { label: "Réunion", value: "reunion" }
+      - { label: "Lieu", name: "lieu", widget: "string" }
+      - { label: "Description courte", name: "description", widget: "text" }
+      - { label: "Détails (optionnel)", name: "body", widget: "markdown", required: false }
+      - { label: "Brouillon", name: "draft", widget: "boolean", default: false }
+
+  # ========== ASSOCIATIONS ==========
+  - name: "associations"
+    label: "Associations"
+    file: "data/associations.json"
+    description: "Liste des associations membres du collectif"
+    editor:
+      preview: false
+    fields:
+      - label: "Associations"
+        name: "associations"
+        widget: "list"
+        fields:
+          - { label: "Nom", name: "name", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Emoji / Icône", name: "icon", widget: "string", hint: "Un emoji représentatif (ex: ✊ 🟣 ❤️‍🩹)" }
+          - { label: "Couleur", name: "color", widget: "color", default: "#E63946" }
+          - { label: "Lien vers le site (optionnel)", name: "url", widget: "string", required: false }
+
+  # ========== PARAMÈTRES DU SITE ==========
+  - name: "settings"
+    label: "Paramètres du site"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Paramètres généraux"
+        name: "config"
+        file: "hugo.toml"
+        fields:
+          - { label: "Titre du site", name: "title", widget: "string" }
+          - label: "Paramètres"
+            name: "params"
+            widget: "object"
+            fields:
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Slogan (hero)", name: "tagline", widget: "string" }
+              - { label: "Texte du manifeste", name: "manifesto", widget: "text" }
+              - { label: "Email de contact", name: "contactEmail", widget: "string" }
