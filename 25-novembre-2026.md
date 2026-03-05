@@ -1,0 +1,10 @@
+---
+title: "Journée contre les violences faites aux femmes"
+date: 2026-11-25
+type_evenement: "mobilisation"
+lieu: "Palais de Justice, Angers"
+description: "Marche féministe et hommage aux victimes de féminicides devant le palais de justice."
+draft: false
+---
+
+Marche féministe et hommage aux victimes de féminicides. Départ devant le palais de justice, marche dans les rues d'Angers.
