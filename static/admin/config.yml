@@ -2,9 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-# Pour le mode test local (sans authentification) décommentez ces lignes :
-# local_backend: true
-
 media_folder: static/images
 public_folder: /images
 
@@ -15,7 +12,6 @@ slug:
   clean_accents: true
 
 collections:
-  # ========== ÉVÉNEMENTS ==========
   - name: "evenements"
     label: "Événements"
     label_singular: "Événement"
@@ -25,7 +21,7 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
-      - label: "Type d'événement"
+      - label: "Type"
         name: "type_evenement"
         widget: "select"
         options:
@@ -35,33 +31,28 @@ collections:
           - { label: "Réunion", value: "reunion" }
       - { label: "Lieu", name: "lieu", widget: "string" }
       - { label: "Description courte", name: "description", widget: "text" }
-      - { label: "Détails (optionnel)", name: "body", widget: "markdown", required: false }
+      - { label: "Détails", name: "body", widget: "markdown", required: false }
       - { label: "Brouillon", name: "draft", widget: "boolean", default: false }
 
-  # ========== ASSOCIATIONS ==========
   - name: "associations"
     label: "Associations"
-    file: "data/associations.json"
-    description: "Liste des associations membres du collectif"
-    editor:
-      preview: false
-    fields:
-      - label: "Associations"
-        name: "associations"
-        widget: "list"
+    files:
+      - label: "Liste des associations"
+        name: "associations_list"
+        file: "data/associations.json"
         fields:
-          - { label: "Nom", name: "name", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Emoji / Icône", name: "icon", widget: "string", hint: "Un emoji représentatif (ex: ✊ 🟣 ❤️‍🩹)" }
-          - { label: "Couleur", name: "color", widget: "color", default: "#E63946" }
-          - { label: "Lien vers le site (optionnel)", name: "url", widget: "string", required: false }
+          - label: "Associations"
+            name: "associations"
+            widget: "list"
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Emoji", name: "icon", widget: "string" }
+              - { label: "Couleur", name: "color", widget: "string", default: "#E63946" }
+              - { label: "Lien site web", name: "url", widget: "string", required: false }
 
-  # ========== PARAMÈTRES DU SITE ==========
   - name: "settings"
     label: "Paramètres du site"
-    delete: false
-    editor:
-      preview: false
     files:
       - label: "Paramètres généraux"
         name: "config"
@@ -73,6 +64,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Description", name: "description", widget: "string" }
-              - { label: "Slogan (hero)", name: "tagline", widget: "string" }
+              - { label: "Slogan", name: "tagline", widget: "string" }
               - { label: "Texte du manifeste", name: "manifesto", widget: "text" }
               - { label: "Email de contact", name: "contactEmail", widget: "string" }
